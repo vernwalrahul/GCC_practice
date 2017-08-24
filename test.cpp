@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<stdint.h>
 using namespace std;
 
 int find_steps(int n)
@@ -19,16 +20,9 @@ int find_op(int A[], int reference, int n)
 
 int main()
 {
-    int n;
-
-    cin>>n;
-
-    int A[n];
-    cout<<" n="<<n<<endl;
-    for(int i=0;i<n;i++)
-        cin>>A[i];
-
-    cout<<find_op(A, 10, n)<<endl;
+    uint64_t p;
+    cin>>p;
+    cout<<"\n p="<<p<<endl;
 
     return 0;
 }

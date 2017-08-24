@@ -56,5 +56,21 @@ void Quick_sort(int A[], int p, int q)
   }
 }
 
+int binary_search2(A stock[], long long int v, long long int n)   //to_search for the place to insert v
+{
+  int l=0, r=n-1, mid, flag=0;
+  while(1)
+  {
+    // cout<<"l = "<<l<<" r= "<<r<<" v = "<<v<<endl;
+    // cout<<stock[r-1].max_sofar<<" "<<v<<" "<<stock[r].max_sofar<<endl;
+    if(stock[r-1].t<v && v<=stock[r].t)
+      return r;
+    mid = (l+r)/2;
+    if(v<=stock[mid].t)
+      r=mid;
+    else
+      l=mid;
+  }
+} 
 // QUICK_SORT //
 
